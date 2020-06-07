@@ -143,7 +143,7 @@ const AddContact = () => {
           email,
           phoneNumber,
           address,
-          picture: downloadURL,
+          picture: downloadUrl,
           star,
         });
     } catch (error) {
@@ -163,7 +163,7 @@ const AddContact = () => {
           email,
           phoneNumber,
           address,
-          picture: downloadURL,
+          picture: downloadUrl,
           star,
         });
     } catch (error) {

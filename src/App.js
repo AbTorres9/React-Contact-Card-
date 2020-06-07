@@ -32,7 +32,7 @@ import PageNotFound from "./pages/PageNotFound";
 //TODO: import reducers and contexts
 import reducer from "./context/reducer";
 import { ContactContext } from "./context/Context";
-import { SET_LOADING, SET_LOADING } from "./context/action.types";
+import { SET_LOADING, SET_CONTACT } from "./context/action.types";
 
 //initlizeing firebase app with the firebase config which are in ./utils/firebaseConfig
 //TODO: initialize FIREBASE
@@ -58,7 +58,7 @@ const App = () => {
       payload: true,
     });
 
-    const contactRef = await firebase.database().ref("/contacts");
+    const contactsRef = await firebase.database().ref("/contacts");
     contactsRef.on("value", (snapshot) => {
       dispatch({
         type: SET_CONTACT,
